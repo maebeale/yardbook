@@ -15,6 +15,7 @@ gem 'devise'
 gem 'holder_rails'
 gem 'jquery-rails'
 gem 'mini_magick'
+
 gem 'rspec-rails', '~> 3.0.1', group: [:development, :test]
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc

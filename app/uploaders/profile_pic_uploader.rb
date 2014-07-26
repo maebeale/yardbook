@@ -17,11 +17,11 @@ class ProfilePicUploader < CarrierWave::Uploader::Base
      process :resize_to_fit => [200, 300]
   end
 
-   def default_url
-     size = case version_name
-        when :thumb then "100x150"
-          else "400x600"
-        end
+  def default_url
+   size = case version_name
+     when :thumb then "100x150"
+      else "400x600"
+     end
      "holder.js/#{size}/text:#{size}/social"
    end
-  end
+end

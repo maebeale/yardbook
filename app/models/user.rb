@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :profile_pic, ProfilePicUploader
 
+  #attr_accessor :profile_pic
+
   scope :admin, -> { where(role: 'admin') }
   scope :student, -> { where(role: 'student') }
 
