@@ -29,6 +29,7 @@ gem 'refills'
 group :development do
   gem 'annotate'
   gem 'guard-rspec', require: false
+  gem 'pry-byebug'
   gem 'spring'
 end
 
