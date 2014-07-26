@@ -8,6 +8,10 @@ CarrierWave.configure do |config|
     config.storage = :file
   end
 
+  # if Rails.env.test?
+  #   config.enable_processing = false
+  # end
+
   config.fog_credentials = {
       :provider               => 'AWS',
       :aws_access_key_id      => Rails.application.secrets.aws_access_key_id,

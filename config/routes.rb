@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: :index
   resources :students, only: :index
-  resources :admins, only: :index
+  resources :admins, only: [:index, :show]
 end
