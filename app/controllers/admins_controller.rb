@@ -17,7 +17,7 @@ class AdminsController < ApplicationController
     @admin = Admin.find(params[:id])
   end
 
-  def cat_params
+  def admin_params
     params.require(:admin).permit!
   end
 end

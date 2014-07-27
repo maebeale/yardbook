@@ -31,7 +31,7 @@ describe AdminsController, :type => :controller do
     #   url =  @cat.image.url
     #   expect(url).to_not be_nil
     # end
-
+  end
   # describe 'POST #create' do
   #   before {@user_attributes = attributes_for(:user)}
   #   it 'succeeds when all attributes are set' do
