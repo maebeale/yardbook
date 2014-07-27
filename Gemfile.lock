@@ -255,6 +255,7 @@ DEPENDENCIES
   annotate
   better_errors
   binding_of_caller
+  byebug
   capybara
   carrierwave
   coffee-rails (~> 4.0.0)

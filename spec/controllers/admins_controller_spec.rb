@@ -16,10 +16,11 @@ describe AdminsController, :type => :controller do
 
     it "shows an admin" do
       get :show, id: @admin.id, format: :json
- #byebug
+#      byebug
       data = JSON.parse(response.body)
-      expect(data).to have_key('fname')
-      expect(data['admins'].first['fname']).to eq @admin.name
+      expect(data).not_to be_empty
+      expect(data['admin']).to have_key('fname')
+      expect(data['admin']['fname']).to eq @admin.fname
     end
     #
     # it "renders only in json" do
@@ -32,31 +33,31 @@ describe AdminsController, :type => :controller do
     #   expect(url).to_not be_nil
     # end
 
-  # describe 'POST #create' do
-  #   before {@user_attributes = attributes_for(:user)}
-  #   it 'succeeds when all attributes are set' do
-  #   #
-  #   end
+    # describe 'POST #create' do
+    #   before {@user_attributes = attributes_for(:user)}
+    #   it 'succeeds when all attributes are set' do
+    #   #
+    #   end
 
-#
-#     it 'fails when a required field is missing' do
-#     #
-#     end
-#   end
-#
-#   describe 'PATCH #update' do
-#     before {@user = create(:user)}
-#     it 'succeeds when valid data are changed' do
-#     #
-#     end
-#
-#     it 'fails when valid data are changed' do
-#     #
-#     end
-#   end
-#
-#   it 'DELETE #destroy' do
-#   #
-#   end
-
+    #
+    #     it 'fails when a required field is missing' do
+    #     #
+    #     end
+    #   end
+    #
+    #   describe 'PATCH #update' do
+    #     before {@user = create(:user)}
+    #     it 'succeeds when valid data are changed' do
+    #     #
+    #     end
+    #
+    #     it 'fails when valid data are changed' do
+    #     #
+    #     end
+    #   end
+    #
+    #   it 'DELETE #destroy' do
+    #   #
+    #   end
+  end
 end

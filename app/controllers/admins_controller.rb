@@ -10,7 +10,7 @@ class AdminsController < ApplicationController
   end
 
   def show
-    respond_with @admin
+    render json: @admin
   end
 
   def find_admin
